@@ -15,11 +15,11 @@ namespace web_demo_2025
             //nhận dữ liệu gửi lên từ client
             //GỬI LÊN POST
             TraVe kq = new TraVe();
+            double a = 0, b = 0, c = 0;
             try
             {
                 if (!IsPostBack)
                 {
-                    double a, b, c;
                     a = double.Parse(this.Request.Form["a"]);
                     b = double.Parse(this.Request.Form["b"]);
                     c = double.Parse(this.Request.Form["c"]);
@@ -51,6 +51,8 @@ namespace web_demo_2025
 
             //chuyển kq thành json -> gửi về client
             string json = JsonConvert.SerializeObject(kq);
+            this.Response.Cookies["input"].Value = $"{a},{b},{c}";
+            this.Response.Cookies["input"].Expires = DateTime.Now.AddMinutes(1);
             this.Response.Write(json);
         }
 

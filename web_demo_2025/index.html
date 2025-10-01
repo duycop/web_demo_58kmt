@@ -108,6 +108,25 @@
                 resultDiv.innerHTML = "🚨 Lỗi kết nối server!";
                 resultDiv.style.color = "red";
             }
+
+
+            
+        }
+
+        //ck--------
+        // Hàm đọc cookie theo tên
+        function getCookie(name) {
+            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+        }
+
+        let val = getCookie("input"); // "44,55,66"
+        console.log("Cookie input:", val);
+        if (val) {
+            let arr = val.split(","); // ["44","55","66"]
+            document.getElementById("num1").value = arr[0] || "";
+            document.getElementById("num2").value = arr[1] || "";
+            document.getElementById("num3").value = arr[2] || "";
         }
     </script>
 </body>

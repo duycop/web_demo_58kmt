@@ -63,6 +63,8 @@
   <ItemGroup>
     <Content Include="api.aspx" />
     <Content Include="index.html" />
+    <Content Include="login.aspx" />
+    <Content Include="noidung.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +74,20 @@
     </Compile>
     <Compile Include="api.aspx.designer.cs">
       <DependentUpon>api.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="noidung.aspx.cs">
+      <DependentUpon>noidung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noidung.aspx.designer.cs">
+      <DependentUpon>noidung.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
